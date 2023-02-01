@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="login">
+      <fieldset>
+        <legend>Registration Form</legend>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your Name"
+        />
+        <br /><br />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your Email"
+        />
+        <br /><br />
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your Username"
+        />
+        <br /><br />
+
+        <input type="button" id="register" value="Register" />
+      </fieldset>
+    </form>
+    <script>
+      let btn = document.getElementById("register");
+      btn.addEventListener("click", submitdata);
+      let person = new Array();
+      function submitdata() {
+        let inputvalue = document.querySelectorAll("input");
+        let obj = new Object();
+        obj.name = inputvalue[0].value;
+        obj.email = inputvalue[1].value;
+        obj.username = inputvalue[2].value;
+        person.push(obj);
+
+        localStorage.setItem("data", JSON.stringify(person));
+        alert("successfully registered");
+        window.location = "index.html";
+      }
+    </script>
+  </body>
+</html>

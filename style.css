@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+.container , .game{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.container img{
+    width: 300px;
+    height: 300px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+.coupanDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#coupanDetail{
+    font-size: 70px;
+    font-weight: 700;
+}
